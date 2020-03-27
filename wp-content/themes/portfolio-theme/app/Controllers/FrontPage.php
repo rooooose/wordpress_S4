@@ -20,8 +20,7 @@ class FrontPage extends Controller
         		'taxonomy' => 'item_type',
         		'field' => 'slug', 
         		'terms' => 'reas-prog'
-        	),
-        	
+        	),	
         )
         
         );
