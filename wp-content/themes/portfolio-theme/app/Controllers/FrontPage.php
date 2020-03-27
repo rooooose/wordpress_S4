@@ -24,9 +24,33 @@ class FrontPage extends Controller
         )
         
         );
-        //$reas_prog_query = new WP_Query($args);
+
         $reas_prog_query = get_posts($args);
         return $reas_prog_query;
     }
+
+
+    public function getReasArt()
+    {
+    	
+
+        $args = array(
+        'post_type' => 'portfolio_items',
+        'tax_query' => array(
+        	array(
+        		'taxonomy' => 'item_type',
+        		'field' => 'slug', 
+        		'terms' => 'reas-art'
+        	),	
+        )
+        
+        );
+
+        $reas_prog_query = get_posts($args);
+        return $reas_prog_query;
+    }
+
+
+
 
 }
