@@ -15,14 +15,14 @@
     <?php echo $__env->make('partials.content-'.get_post_type(), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   <?php endwhile; ?>
 
-  <?php echo e($get_reas_prog); ?>
 
 
-  <?php while($get_reas_prog->have_posts()): ?>
-    <?php 
-      $get_reas_prog->the_post();
-    ?>
-  <?php endwhile; ?>
+ <?php $__currentLoopData = $get_reas_prog; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rea): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <?php echo e($rea->post_title); ?>
+
+      <?php echo e($rea->techno); ?>
+
+  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
   <?php echo get_the_posts_navigation(); ?>
