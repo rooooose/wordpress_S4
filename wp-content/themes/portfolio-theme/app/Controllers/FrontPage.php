@@ -7,7 +7,7 @@ use Sober\Controller\Controller;
 class FrontPage extends Controller
 {
 
-	//protected $acf = true;
+	protected $acf = true;
 
 	public function getReasProg()
     {
@@ -25,8 +25,8 @@ class FrontPage extends Controller
         
         );
 
-        $reas_prog_query = get_posts($args);
-        return $reas_prog_query;
+        $query = get_posts($args);
+        return $query;
     }
 
 
@@ -46,9 +46,11 @@ class FrontPage extends Controller
         
         );
 
-        $reas_prog_query = get_posts($args);
-        return $reas_prog_query;
+        $query = get_posts($args);
+        return $query;
     }
+
+    
 
 
 

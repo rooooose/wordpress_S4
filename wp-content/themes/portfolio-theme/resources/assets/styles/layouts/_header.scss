@@ -1,7 +1,15 @@
+
 .banner .nav li {
-  @extend .nav-item;
+  //@extend .nav-item;
 }
 
-.banner .nav a {
-  @extend .nav-link;
+.banner .nav {
+  display: flex;
+  justify-content: right;
+
+  .banner .nav a {
+    @extend .nav-link;
+
+    color: $font-main;
+  }
 }
