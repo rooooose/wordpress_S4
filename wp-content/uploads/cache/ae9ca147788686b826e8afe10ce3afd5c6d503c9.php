@@ -1,4 +1,4 @@
-<header class="banner">
+<header>
   <div class="container">
     <!-- <a class="brand" href="<?php echo e(home_url('/')); ?>"><?php echo e(get_bloginfo('name', 'display')); ?></a> -->
     <nav class="nav-primary">
@@ -7,5 +7,14 @@
 
       <?php endif; ?>
     </nav>
+
+    <div class="presentation">
+    	<?php echo wp_get_attachment_image($logo , array('350', '250'), "", array( "class" => "logo", "alt" => "mon logo" ) ); ?>
+
+    	<p><?php echo $intro_1; ?></p>
+    	<p><?php echo $intro_2; ?></p>
+    </div>
+    
+
   </div>
 </header>

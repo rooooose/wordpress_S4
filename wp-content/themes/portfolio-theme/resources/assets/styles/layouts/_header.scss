@@ -1,15 +1,25 @@
 
-.banner .nav li {
-  //@extend .nav-item;
-}
+header {
+  height: 100vh;
 
-.banner .nav {
-  display: flex;
-  justify-content: right;
+  .nav {
+    display: flex;
+    justify-content: right;
+    font-family: $font-regular;
+  }
 
-  .banner .nav a {
-    @extend .nav-link;
+  .presentation {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    color: $font-main;
+    .logo {
+      margin-bottom: 100px;
+    }
+
+    p {
+      font-size: 20px;
+    }
   }
 }

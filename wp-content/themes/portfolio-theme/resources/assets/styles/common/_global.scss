@@ -2,4 +2,20 @@ body {
   background-color: $background-color;
   color: $font-color;
   font-family: $font-main;
+  padding: 70px 0;
+
+  .container {
+    max-width: 1300px;
+  }
+
+  a {
+    color: $font-color;
+    margin-left: 100px;
+
+    &:hover {
+      text-decoration: none;
+      color: $font-color;
+      font-family: $font-bold;
+    }
+  }
 }
