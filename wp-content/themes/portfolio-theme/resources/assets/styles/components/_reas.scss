@@ -1,0 +1,9 @@
+div.popup {
+  div.rea_content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

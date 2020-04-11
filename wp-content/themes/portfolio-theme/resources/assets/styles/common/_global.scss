@@ -11,11 +11,13 @@ body {
   a {
     color: $font-color;
     margin-left: 100px;
+    transition: text-shadow 0.3s;
 
     &:hover {
       text-decoration: none;
       color: $font-color;
-      font-family: $font-bold;
+      //font-family: $font-bold;
+      text-shadow: 0 0 0.65px #fff, 0 0 0.65px #fff;
     }
   }
 }

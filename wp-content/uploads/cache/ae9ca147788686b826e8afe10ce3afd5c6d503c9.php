@@ -13,6 +13,12 @@
 
     	<p><?php echo $intro_1; ?></p>
     	<p><?php echo $intro_2; ?></p>
+      <?php echo wp_get_attachment_image($triangle_1 , array('850', '750'), "", array( "class" => "triangle1", "alt" => "triangle header gauche" ) ); ?>
+
+      <?php echo wp_get_attachment_image($triangle_2 , array('650', '550'), "", array( "class" => "triangle2", "alt" => "triangle header droite" ) ); ?>
+
+      <?php echo wp_get_attachment_image($ligne_directrice , array('650', '550'), "", array( "class" => "ligne1", "alt" => "ligne directrice header" ) ); ?>
+
     </div>
     
 
