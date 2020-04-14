@@ -1,4 +1,6 @@
 div#qui_suis_je {
+  position: relative;
+
   h2 {
     text-transform: uppercase;
     font-size: 70px;
@@ -10,9 +12,44 @@ div#qui_suis_je {
   &::after {
     @extend %after-rectangle;
 
-    margin-top: -410px;
+    margin-top: -400px;
     width: 450px;
     height: 50px;
     margin-left: 50px;
+    position: absolute;
+  }
+
+  div.qui_suis_je_content {
+    margin-top: 60px;
+    display: flex;
+
+    div.text {
+      width: 540px;
+    }
+
+    div.image {
+      border: 2px solid white;
+      right: 180px;
+      transform: rotate(-15deg);
+      position: absolute;
+      width: 248px;
+      height: 300px;
+    }
+
+    img.img_qui_suis_je {
+      margin-left: 300px;
+    }
+
+    img.triangle_qui_suis_je {
+      position: absolute;
+      margin-left: 310px;
+      margin-top: -50px;
+    }
+
+    img.ligne_directrice_2 {
+      position: absolute;
+      left: 110px;
+      top: 310px;
+    }
   }
 }

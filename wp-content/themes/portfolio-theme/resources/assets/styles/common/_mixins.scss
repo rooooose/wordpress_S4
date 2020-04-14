@@ -9,3 +9,11 @@
   margin-left: 140px;
   z-index: 1;
 }
+
+%titres {
+  text-transform: uppercase;
+  font-size: 70px;
+  font-family: $font-title;
+  z-index: 3;
+  position: relative;
+}

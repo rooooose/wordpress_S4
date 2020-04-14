@@ -1,3 +1,38 @@
+div#reas_prog {
+  margin-top: 300px;
+  margin-bottom: 200px;
+
+  h2 {
+    @extend %titres;
+  }
+
+  &::after {
+    @extend %after-rectangle;
+
+    margin-top: -130px;
+    width: 900px;
+    height: 50px;
+    margin-left: 70px;
+    position: absolute;
+  }
+}
+
+div#reas_art {
+  h2 {
+    @extend %titres;
+  }
+
+  &::after {
+    @extend %after-rectangle;
+
+    margin-top: -90px;
+    width: 900px;
+    height: 50px;
+    margin-left: 70px;
+    position: absolute;
+  }
+}
+
 div.popup {
   div.rea_content {
     display: none;
