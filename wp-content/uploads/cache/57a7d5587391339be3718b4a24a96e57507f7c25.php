@@ -5,8 +5,12 @@
   <div id="qui_suis_je">
 
       <h2><?php echo $titre; ?></h2>
-      <p><?php echo $texte; ?></p>
+      <?php while(have_posts()): ?> <?php the_post() ?>
+        <?php the_content(); ?>
+      <?php endwhile; ?>
       <?php echo wp_get_attachment_image($photo , array('400', '300'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ); ?>
+
+      
 
 
 
@@ -15,12 +19,12 @@
   <div id="reas_prog">
     
     <?php $__currentLoopData = $get_reas_prog; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rea): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    
         <div class="rea_square" data-name="<?php echo e($rea->post_title); ?>">
 
           <h2><?php echo e($rea->post_title); ?></h2>
 
         </div>
-
         
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 

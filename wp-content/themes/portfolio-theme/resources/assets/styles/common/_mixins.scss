@@ -1,0 +1,11 @@
+%after-rectangle {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 20px;
+  background: linear-gradient(0.25turn, $pink, $blue);
+  opacity: 0.5;
+  margin-top: -75px;
+  margin-left: 140px;
+  z-index: 1;
+}

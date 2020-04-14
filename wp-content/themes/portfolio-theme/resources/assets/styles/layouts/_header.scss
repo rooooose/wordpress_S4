@@ -25,23 +25,25 @@ header {
     }
 
     &::after {
-      content: "";
-      display: block;
-      width: 130px;
-      height: 20px;
-      background: linear-gradient(0.25turn, $pink, $blue);
-      opacity: 0.5;
-      margin-top: -75px;
-      margin-left: 140px;
-      z-index: 1;
+      @extend %after-rectangle;
     }
 
     img:not(.logo) {
       position: absolute;
+    }
 
-      .triangle1 {
-        left: 500px;
-      }
+    img.triangle1 {
+      left: -200px;
+    }
+
+    img.triangle2 {
+      right: -100px;
+      top: -100px;
+    }
+
+    img.ligne1 {
+      top: 380px;
+      transform: translateX(15%);
     }
   }
 }
