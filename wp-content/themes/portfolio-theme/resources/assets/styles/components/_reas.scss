@@ -2,43 +2,97 @@ div#reas_prog {
   margin-top: 300px;
   margin-bottom: 200px;
 
+  div.popup_prog {
+    display: none;
+
+    &.active {
+      @extend %popup_view;
+    }
+
+    div.rea_content {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
   h2 {
-    @extend %titres;
+    @extend %titles;
   }
 
   &::after {
     @extend %after-rectangle;
 
-    margin-top: -130px;
+    margin-top: -600px;
     width: 900px;
     height: 50px;
     margin-left: 70px;
     position: absolute;
+  }
+
+  .grid_container {
+    @extend %grid;
+
+    div.rea_square_prog {
+      @extend %rea_square;
+
+      h3 {
+        @extend %h3;
+      }
+
+      div.filter {
+        @extend %filter;
+      }
+    }
   }
 }
 
 div#reas_art {
+  div.popup_art {
+    display: none;
+
+    &.active {
+      @extend %popup_view;
+    }
+
+    div.rea_content {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
   h2 {
-    @extend %titres;
+    @extend %titles;
   }
 
   &::after {
     @extend %after-rectangle;
 
-    margin-top: -90px;
+    margin-top: -600px;
     width: 900px;
     height: 50px;
     margin-left: 70px;
     position: absolute;
   }
-}
 
-div.popup {
-  div.rea_content {
-    display: none;
+  .grid_container {
+    @extend %grid;
 
-    &.active {
-      display: block;
+    div.rea_square_art {
+      @extend %rea_square;
+
+      h3 {
+        @extend %h3;
+      }
+
+      div.filter {
+        @extend %filter;
+      }
     }
   }
 }

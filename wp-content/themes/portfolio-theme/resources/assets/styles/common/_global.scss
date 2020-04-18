@@ -6,6 +6,10 @@ body {
 
   .container {
     max-width: 1300px;
+
+    main.main {
+      position: relative;
+    }
   }
 
   a {
@@ -16,7 +20,6 @@ body {
     &:hover {
       text-decoration: none;
       color: $font-color;
-      //font-family: $font-bold;
       text-shadow: 0 0 0.65px #fff, 0 0 0.65px #fff;
     }
   }

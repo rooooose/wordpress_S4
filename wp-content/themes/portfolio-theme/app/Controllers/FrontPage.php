@@ -15,6 +15,7 @@ class FrontPage extends Controller
 
         $args = array(
         'post_type' => 'portfolio_items',
+        'posts_per_page' => -1,
         'tax_query' => array(
         	array(
         		'taxonomy' => 'item_type',
@@ -36,6 +37,7 @@ class FrontPage extends Controller
 
         $args = array(
         'post_type' => 'portfolio_items',
+        'posts_per_page' => -1,
         'tax_query' => array(
         	array(
         		'taxonomy' => 'item_type',
