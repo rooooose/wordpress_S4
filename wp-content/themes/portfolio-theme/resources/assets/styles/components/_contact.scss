@@ -1,0 +1,45 @@
+div#contact {
+  margin: 100px 0;
+
+  h2 {
+    @extend %titles;
+  }
+
+  &::after {
+    @extend %after-rectangle;
+
+    margin-top: -600px;
+    width: 900px;
+    height: 50px;
+    margin-left: 70px;
+  }
+
+  div.contact_content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+
+    a {
+      @extend %contact-items;
+
+      color: $font-color;
+
+      &:hover {
+        @extend %a-hover;
+      }
+
+      p {
+        margin-top: 20px;
+      }
+    }
+
+    div.mail {
+      @extend %contact-items;
+
+      p {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+

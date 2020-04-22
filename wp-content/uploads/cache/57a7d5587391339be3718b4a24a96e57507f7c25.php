@@ -16,8 +16,6 @@
 
         <?php echo wp_get_attachment_image($photo , array('400', '300'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ); ?>
 
-        <div class="image">
-        </div>
         
         <?php echo wp_get_attachment_image($triangle , array('600', '800'), "", array( "class" => "triangle_qui_suis_je", "alt" => "triangle" ) ); ?>
 
@@ -33,23 +31,12 @@
 
     <div class="popup_prog">
 
+      <?php $__currentLoopData = $get_reas_prog; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rea): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php echo $__env->make('partials.popup-content', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
       <?php echo wp_get_attachment_image($croix , array('400', '300'), "", array( "class" => "cross_prog", "alt" => "croix" ) ); ?>
 
-
-      <?php $__currentLoopData = $get_reas_prog; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rea): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <div class="rea_content" data-name="<?php echo e($rea->post_title); ?>">
-          <h2><?php echo e($rea->post_title); ?></h2>
-          <p><?php echo e($rea->techno); ?></p>
-          <p><?php echo e($rea->annee); ?></p>
-          <h3>La demande :</h3>
-          <p><?php echo e($rea->demande); ?></p>
-          <p><?php echo e($rea->description); ?></p>
-          <?php echo wp_get_attachment_image($rea->photo , array('400', '300'), "", array( "class" => "img_reas", "alt" => "photo $rea->post_title" ) ); ?>
-
-          <?php echo wp_get_attachment_image($rea->photo_2 , array('400', '300'), "", array( "class" => "img_reas", "alt" => "photo 2 $rea->post_title" ) ); ?>
-
-        </div>
-      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
     </div>
 
@@ -75,24 +62,13 @@
   <div id="reas_art">
 
     <div class="popup_art">
-    
-      <?php echo wp_get_attachment_image($croix , array('400', '300'), "", array( "class" => "cross_art", "alt" => "croix" ) ); ?>
-
 
       <?php $__currentLoopData = $get_reas_art; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rea): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <div class="rea_content" data-name="<?php echo e($rea->post_title); ?>">
-          <h2><?php echo e($rea->post_title); ?></h2>
-          <p><?php echo e($rea->techno); ?></p>
-          <p><?php echo e($rea->annee); ?></p>
-          <h3>La demande :</h3>
-          <p><?php echo e($rea->demande); ?></p>
-          <p><?php echo e($rea->description); ?></p>
-          <?php echo wp_get_attachment_image($rea->photo , array('400', '300'), "", array( "class" => "img_reas", "alt" => "photo $rea->post_title" ) ); ?>
-
-          <?php echo wp_get_attachment_image($rea->photo_2 , array('400', '300'), "", array( "class" => "img_reas", "alt" => "photo 2 $rea->post_title" ) ); ?>
-
-        </div>
+        <?php echo $__env->make('partials.popup-content', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+      <?php echo wp_get_attachment_image($croix , array('400', '300'), "", array( "class" => "cross_art", "alt" => "croix" ) ); ?>
+
 
     </div>
 
@@ -112,6 +88,40 @@
       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
     </div>
+
+  </div>
+
+  <div id="contact">
+
+      <h2><?php echo $titre_contact; ?></h2>
+
+      <div class="contact_content">
+
+        <a href="<?php echo $lien_insta_1; ?>" class="insta_1">
+          <?php echo wp_get_attachment_image($logo_insta , array('50', '200'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ); ?>
+
+          <p><?php echo $nom_insta_1; ?></p>
+        </a>
+
+        <a href="<?php echo $lien_insta_2; ?>" class="insta_2">
+          <?php echo wp_get_attachment_image($logo_insta , array('50', '200'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ); ?>
+
+          <p><?php echo $nom_insta_2; ?></p>
+        </a>
+
+        <a href="<?php echo $lien_linkedin; ?>" class="linkedin">
+          <?php echo wp_get_attachment_image($logo_linkedin , array('50', '200'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ); ?>
+
+          <p><?php echo $nom_linkedin; ?></p>
+        </a>
+
+        <div class="mail">
+          <?php echo wp_get_attachment_image($logo_mail , array('50', '300'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ); ?>
+
+          <p><?php echo $mail; ?></p>
+        </div>
+
+      </div>
 
   </div>
   

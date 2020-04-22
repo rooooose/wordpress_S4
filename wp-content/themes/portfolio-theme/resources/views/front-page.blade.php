@@ -17,8 +17,6 @@
         </div>
 
         {!! wp_get_attachment_image($photo , array('400', '300'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ) !!}
-        <div class="image">
-        </div>
         
         {!! wp_get_attachment_image($triangle , array('600', '800'), "", array( "class" => "triangle_qui_suis_je", "alt" => "triangle" ) ) !!}
 
@@ -32,20 +30,11 @@
 
     <div class="popup_prog">
 
-      {!! wp_get_attachment_image($croix , array('400', '300'), "", array( "class" => "cross_prog", "alt" => "croix" ) ) !!}
-
       @foreach($get_reas_prog as $rea)
-        <div class="rea_content" data-name="{{$rea->post_title}}">
-          <h2>{{$rea->post_title}}</h2>
-          <p>{{$rea->techno}}</p>
-          <p>{{$rea->annee}}</p>
-          <h3>La demande :</h3>
-          <p>{{$rea->demande}}</p>
-          <p>{{$rea->description}}</p>
-          {!! wp_get_attachment_image($rea->photo , array('400', '300'), "", array( "class" => "img_reas", "alt" => "photo $rea->post_title" ) ) !!}
-          {!! wp_get_attachment_image($rea->photo_2 , array('400', '300'), "", array( "class" => "img_reas", "alt" => "photo 2 $rea->post_title" ) ) !!}
-        </div>
+        @include('partials.popup-content')
       @endforeach
+
+      {!! wp_get_attachment_image($croix , array('400', '300'), "", array( "class" => "cross_prog", "alt" => "croix" ) ) !!}
 
     </div>
 
@@ -71,21 +60,12 @@
   <div id="reas_art">
 
     <div class="popup_art">
-    
-      {!! wp_get_attachment_image($croix , array('400', '300'), "", array( "class" => "cross_art", "alt" => "croix" ) ) !!}
 
       @foreach($get_reas_art as $rea)
-        <div class="rea_content" data-name="{{$rea->post_title}}">
-          <h2>{{$rea->post_title}}</h2>
-          <p>{{$rea->techno}}</p>
-          <p>{{$rea->annee}}</p>
-          <h3>La demande :</h3>
-          <p>{{$rea->demande}}</p>
-          <p>{{$rea->description}}</p>
-          {!! wp_get_attachment_image($rea->photo , array('400', '300'), "", array( "class" => "img_reas", "alt" => "photo $rea->post_title" ) ) !!}
-          {!! wp_get_attachment_image($rea->photo_2 , array('400', '300'), "", array( "class" => "img_reas", "alt" => "photo 2 $rea->post_title" ) ) !!}
-        </div>
+        @include('partials.popup-content')
       @endforeach
+
+      {!! wp_get_attachment_image($croix , array('400', '300'), "", array( "class" => "cross_art", "alt" => "croix" ) ) !!}
 
     </div>
 
@@ -105,6 +85,36 @@
       @endforeach
 
     </div>
+
+  </div>
+
+  <div id="contact">
+
+      <h2>{!! $titre_contact !!}</h2>
+
+      <div class="contact_content">
+
+        <a href="{!! $lien_insta_1 !!}" class="insta_1">
+          {!! wp_get_attachment_image($logo_insta , array('50', '200'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ) !!}
+          <p>{!! $nom_insta_1 !!}</p>
+        </a>
+
+        <a href="{!! $lien_insta_2 !!}" class="insta_2">
+          {!! wp_get_attachment_image($logo_insta , array('50', '200'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ) !!}
+          <p>{!! $nom_insta_2 !!}</p>
+        </a>
+
+        <a href="{!! $lien_linkedin !!}" class="linkedin">
+          {!! wp_get_attachment_image($logo_linkedin , array('50', '200'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ) !!}
+          <p>{!! $nom_linkedin !!}</p>
+        </a>
+
+        <div class="mail">
+          {!! wp_get_attachment_image($logo_mail , array('50', '300'), "", array( "class" => "img_qui_suis_je", "alt" => "ma tête" ) ) !!}
+          <p>{!! $mail !!}</p>
+        </div>
+
+      </div>
 
   </div>
   

@@ -9,11 +9,44 @@ div#reas_prog {
       @extend %popup_view;
     }
 
+    img.cross_prog {
+      cursor: pointer;
+    }
+
     div.rea_content {
       display: none;
 
       &.active {
-        display: block;
+        @extend %rea-content-view;
+      }
+
+      div.infos {
+        @extend %div-infos;
+
+        h4 {
+          @extend %h4;
+        }
+
+        p.subtitle {
+          @extend %subtitle;
+
+          span {
+            @extend %year;
+          }
+        }
+
+        span.instructions {
+          font-family: $font-semi-bold;
+        }
+
+        img.triangle_popup {
+          position: absolute;
+          bottom: -350px;
+        }
+      }
+
+      div.images {
+        @extend %div-images;
       }
     }
   }
@@ -29,7 +62,6 @@ div#reas_prog {
     width: 900px;
     height: 50px;
     margin-left: 70px;
-    position: absolute;
   }
 
   .grid_container {
@@ -57,11 +89,50 @@ div#reas_art {
       @extend %popup_view;
     }
 
+    img.cross_art {
+      cursor: pointer;
+    }
+
     div.rea_content {
       display: none;
 
       &.active {
-        display: block;
+        @extend %rea-content-view;
+      }
+
+      div.infos {
+        @extend %div-infos;
+
+        h4 {
+          @extend %h4;
+        }
+
+        p.subtitle {
+          @extend %subtitle;
+
+          span {
+            @extend %year;
+          }
+        }
+
+        span.instructions {
+          font-family: $font-semi-bold;
+        }
+
+        a {
+          color: black;
+          font-family: $font-bold;
+          text-decoration: none;
+        }
+
+        img.triangle_popup {
+          position: absolute;
+          bottom: -350px;
+        }
+      }
+
+      div.images {
+        @extend %div-images;
       }
     }
   }
@@ -77,7 +148,6 @@ div#reas_art {
     width: 900px;
     height: 50px;
     margin-left: 70px;
-    position: absolute;
   }
 
   .grid_container {
