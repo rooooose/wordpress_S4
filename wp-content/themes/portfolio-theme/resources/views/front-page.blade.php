@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
 
   <div id="qui_suis_je">
 
